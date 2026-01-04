@@ -1,0 +1,26 @@
+[project]
+name = "streaming-drl-jax"
+version = "0.1.0"
+description = "Streaming RL but faster with jax"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "distrax>=0.1.7",
+    "flax>=0.12.2",
+    "gymnasium[mujoco]>=1.2.3",
+    "jax[cuda13]>=0.8.2",
+    "jax>=0.8.2",
+    "numpy>=2.4.0",
+    "optax>=0.2.6",
+    "playground>=0.0.5",
+    "mediapy>=1.2.5",
+    "warp-lang>=1.10.1",
+    "dm-control>=1.0.34",
+    "shimmy[dm-control]>=2.0.0",
+    "draccus>=0.11.5",
+]
+
+[tool.ruff]
+# Disable fix for unused imports (`F401`).
+unfixable = ["F401"]
+
