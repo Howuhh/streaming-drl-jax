@@ -14,7 +14,7 @@ We measured Steps per second (SPS) for each implementation on CPU (AMD Ryzen 5 7
 | GPU   | ~490   | ~1920   | ~3.9x |
 | M3 Pro   | ~1870   | ~5220   | ~2.8x |
 
-In streaming regime most of the overhead comes from the pyton and CPU->GPU transfers. For example, naive usage of nnx.jit may reduce SPS to levels comparable to torch, so be mindful. Flax documentation provides good summary here: [Performance considerations](https://flax.readthedocs.io/en/stable/guides/performance.html).
+In streaming regime most of the overhead comes from the python and CPU->GPU transfers. For example, naive usage of nnx.jit may reduce SPS to levels comparable to torch, so be mindful. Flax documentation provides good summary here: [Performance considerations](https://flax.readthedocs.io/en/stable/guides/performance.html).
 
 I also tested dm-control envs from [MuJoCo-Playground](https://playground.mujoco.org/), but, as expected, jax-based environments are painfully slow without vectorization across many parallel envs, so there are no benefits in using them (even if end-to-end jitted) in streaming setup.
 
