@@ -20,7 +20,7 @@ I also tested dm-control envs from [MuJoCo-Playground](https://playground.mujoco
 
 ## Returns
 
-For some reason, with idential hyperparameters it jax version works better on HalfCheetah-v5 env. Jax and Torch have different default init, which may be the main reason.
+For some reason, with idential hyperparameters Jax version works better in HalfCheetah-v5. Jax and Torch have different default inits, which may be the main reason.
 
 ![img](returns.png)
 
